@@ -29,14 +29,20 @@ def ZapolnitMassiv(mas : np.ndarray):
 Факториал
 '''
 def Factorial(mas : np.ndarray):
-    pass
+    result = 0
+    for i in mas:
+        if i == 2:
+            result += 1
+    result = math.factorial(result)
+    return result
 
 
 def main():
     masA = GetDataTest()
-    print(masA)
-    masA = ZapolnitMassiv(masA)
-    masA = Factorial(masA)
-
+    print('masA', masA)
+    masB = ZapolnitMassiv(masA)
+    print('masB', masB)
+    factorial = Factorial(masB)
+    print('factorial', factorial)
 
 main()
